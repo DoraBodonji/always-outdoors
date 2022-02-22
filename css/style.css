@@ -1,0 +1,370 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+button {
+  border: none;
+}
+
+/* Colors */
+/* Sizes */
+/* Rem sizes */
+.u-p__left-m {
+  padding-left: 1rem;
+}
+
+.u-fs-l {
+  font-size: 1.2rem;
+}
+
+.u-fs-m {
+  font-size: 1rem;
+}
+
+.u-pb-3rem {
+  padding-bottom: 3rem;
+}
+
+.u-ptb-xl {
+  padding: 1.5rem 0;
+}
+
+.u-ta-c {
+  text-align: center;
+}
+
+.u-tt-up {
+  text-transform: uppercase;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/open-sans/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("../fonts/open-sans/OpenSans-Bold.ttf");
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Header */
+.header {
+  background-color: #1e5d69;
+  padding: 2.5rem 17%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+@media only screen and (max-width: 1024px) {
+  .header {
+    padding: 2.5rem 2rem;
+  }
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+.header__logo img {
+  filter: invert(100%);
+}
+
+.header__nav {
+  display: flex;
+  flex-direction: row;
+}
+.header__nav .header__nav-item {
+  padding-right: 1.5rem;
+  font-size: 0.8rem;
+}
+.header__nav .header__nav-item:hover {
+  color: #808080;
+}
+
+.header__search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header__search img {
+  width: 17px;
+  height: 17px;
+  filter: invert(100%);
+}
+.header__search .header__search-field:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  padding: 4rem 0;
+}
+
+.hero__title {
+  text-align: center;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #1e5d69;
+  font-family: "Open Sans Bold";
+  padding-bottom: 4rem;
+}
+
+.hero__box-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+  max-width: calc(1200px + 2rem);
+  padding: 0 2rem;
+  margin: auto;
+}
+.hero__box-wrapper img {
+  width: 100%;
+}
+@media only screen and (max-width: 1024px) {
+  .hero__box-wrapper {
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+  }
+}
+
+h3 {
+  color: #1e5d69;
+  font-size: 1rem;
+  padding-bottom: 1.2rem;
+  font-family: "Open Sans Bold";
+}
+
+p {
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+}
+
+/* Section Adventure */
+.section__adventure {
+  clip-path: polygon(0 14%, 100% 0, 100% 86%, 0 100%);
+  background: linear-gradient(to bottom right, rgba(24, 157, 182, 0.5), rgba(172, 216, 225, 0.5)), url("../images/img-bg-adventure.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10rem 0;
+}
+
+.section__adventure-title {
+  padding-top: 0;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-family: "Open Sans Bold";
+  padding: 4rem 0;
+}
+
+.section__card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 4rem;
+  max-width: calc(1200px + 2rem);
+  margin: auto;
+}
+@media only screen and (max-width: 1024px) {
+  .section__card-wrapper {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+    grid-gap: 2rem;
+  }
+}
+
+.section__adventure-card {
+  background-color: white;
+  padding: 2rem;
+}
+.section__adventure-card img {
+  width: 52px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Section Tours */
+.section__tours-title {
+  color: #1e5d69;
+  padding-top: 4rem;
+}
+
+.section__tour-card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4rem;
+  max-width: calc(1200px + 2rem);
+  margin: auto;
+}
+.section__tour-card-wrapper img {
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
+}
+@media only screen and (max-width: 1024px) {
+  .section__tour-card-wrapper {
+    padding: 0 1rem;
+    grid-gap: 2rem;
+  }
+}
+
+.section__tours-card {
+  box-shadow: 0 8px 10px -2px rgba(0, 0, 0, 0.75);
+}
+.section__tours-card li:not(:last-child) {
+  border-bottom: 1px solid white;
+}
+.section__tours-card:hover {
+  background-color: #1e5d69;
+  color: white;
+}
+.section__tours-card:hover .section__tours-subtitle {
+  color: white;
+}
+
+.section__tours-list {
+  text-align: center;
+  padding: 0 2rem;
+  padding-bottom: 1.5rem;
+}
+.section__tours-list .section__tours-item {
+  padding: 1rem 0;
+  font-size: 0.8rem;
+}
+
+.btn__wrapper {
+  text-align: center;
+  padding: 4rem 0;
+}
+.btn__wrapper .btn {
+  display: inline-block;
+  padding: 20px 40px;
+  background-image: linear-gradient(90deg, #1e5d69, #0093af);
+  border-radius: 30px;
+  text-transform: uppercase;
+  margin: auto;
+  color: white;
+}
+.btn__wrapper .btn:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background-color: #1e5d69;
+}
+.footer .footer__top {
+  padding: 3rem 17%;
+}
+
+.footer__list {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 0.8rem;
+  padding-bottom: 3rem;
+}
+.footer__list .footer__list-item:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.footer__icons {
+  display: flex;
+  justify-content: center;
+}
+.footer__icons div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.3rem;
+  width: 32px;
+  height: 32px;
+}
+.footer__icons div:not(:last-child) {
+  margin-right: 1.5rem;
+}
+.footer__icons div img {
+  width: 90%;
+}
+
+.footer__bottom {
+  background-color: #2d4e54;
+  padding: 1rem 17%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+@media only screen and (max-width: 1024px) {
+  .footer__bottom {
+    padding: 2.5rem 2rem;
+  }
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+}
+.footer__logo a {
+  text-transform: uppercase;
+  padding-left: 1rem;
+}
+.footer__logo a:hover {
+  text-decoration: underline;
+}
+.footer__logo img {
+  filter: invert(100%);
+}
+
+.footer__copyrights {
+  font-size: 0.8rem;
+}
+
+/*# sourceMappingURL=style.css.map */

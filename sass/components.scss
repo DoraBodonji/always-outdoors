@@ -1,0 +1,314 @@
+/* Header */
+
+.header {
+    background-color: $color-primary;
+    padding: 2.5rem 17%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+
+    @include responsive (laptop) {
+        padding: 2.5rem 2rem;
+    }
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+
+    img {
+        filter: invert(100%);
+    }
+}
+
+.header__nav {
+    display: flex;
+    flex-direction: row;
+
+    .header__nav-item {
+        padding-right: $size-xl;
+        font-size: $size-s;
+
+        &:hover {
+            color: $color-gray-border;
+        }
+    }
+}
+
+.header__search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    img {
+        width: 17px;
+        height: 17px;
+        filter: invert(100%);
+    }
+
+    .header__search-field {
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}
+
+
+/* Hero */
+
+.hero {
+    padding: 4rem 0;
+}
+
+.hero__title {
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: $color-primary;
+    font-family: 'Open Sans Bold';
+    padding-bottom: 4rem;
+}
+
+.hero__box-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+    max-width: calc(1200px + 2rem);
+    padding: 0 2rem;
+    margin: auto;
+
+    img {
+        width: 100%;
+    }
+
+    @include responsive (laptop) {
+        grid-template-columns: 1fr;
+        padding: 0 2rem;
+    }
+}
+
+
+h3 {
+    color: $color-primary;
+    font-size: $size-m;
+    padding-bottom: $size-l;
+    font-family: 'Open Sans Bold';
+}
+
+p {
+    font-size: $size-s;
+    line-height: 1.4rem;
+}
+
+
+
+/* Section Adventure */
+
+.section__adventure {
+    clip-path: polygon(0 14%,100% 0,100% 86%,0 100%);
+    background: linear-gradient(to bottom right,rgba(24,157,182,.5),rgba(172,216,225,.5)), url('../images/img-bg-adventure.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10rem 0;
+}
+.section__adventure-title {
+    padding-top: 0;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: 'Open Sans Bold';
+    padding: 4rem 0;
+}
+
+.section__card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 4rem;
+    max-width: calc(1200px + 2rem);
+    margin: auto;
+
+    @include responsive (laptop) {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 2rem;
+        grid-gap: 2rem;
+    }
+}
+
+.section__adventure-card {
+    background-color: white;
+    padding: 2rem;
+
+    img {
+        width: 52px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Section Tours */
+
+.section__tours-title {
+    color: $color-primary;
+    padding-top: 4rem;
+}
+.section__tour-card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4rem;
+    max-width: calc(1200px + 2rem);
+    margin: auto;
+
+    img {
+        width: 100%;
+        clip-path: polygon(0 0,100% 0,100% 87%,0 100%);
+    }
+    
+    @include responsive (laptop) {
+       padding: 0 $size-m;
+       grid-gap: 2rem;
+    }
+
+}
+
+.section__tours-card {
+    box-shadow: 0 8px 10px -2px rgb(0 0 0 / 75%);
+    
+    li:not(:last-child) {
+        border-bottom: 1px solid white;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        color: white;
+
+
+        .section__tours-subtitle {
+            color: white;
+        }
+    }
+}
+
+.section__tours-list {
+    text-align: center;
+    padding: 0 2rem;
+    padding-bottom: $size-xl;
+
+    .section__tours-item {
+        padding: $size-m 0;
+        font-size: $size-s;
+    }
+}
+
+.btn__wrapper{
+    text-align: center;
+    padding: 4rem 0;
+
+    .btn {
+        display: inline-block;
+        padding: 20px 40px;
+        background-image: linear-gradient(90deg,#1e5d69,#0093af);
+        border-radius: 30px;
+        text-transform: uppercase;
+        margin: auto;
+        color: white;
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}
+
+/* Footer */
+
+.footer {
+    background-color: $color-primary;
+
+    .footer__top {
+        padding: 3rem 17%;
+    }
+}
+
+.footer__list {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: $size-s;
+    padding-bottom: 3rem;
+
+    .footer__list-item:not(:last-child) {
+        margin-right: $size-xl;
+    }
+}
+
+.footer__icons {
+    display: flex;
+    justify-content: center;
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 50%;
+        padding: 0.3rem;
+        width: 32px;
+        height: 32px;
+        
+        &:not(:last-child) {
+            margin-right: $size-xl;
+        }
+
+        img {
+            width: 90%;
+        }
+    }
+}
+
+.footer__bottom {
+    background-color: $color-blue-lighter;
+    padding: 1rem 17%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+
+    @include responsive (laptop) {
+        padding: 2.5rem 2rem;
+    }
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+
+    a {
+        text-transform: uppercase;
+        padding-left: $size-m;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    img {
+        filter: invert(100%);
+    }
+}
+
+.footer__copyrights {
+    font-size: $size-s;
+}
+
+
+
+

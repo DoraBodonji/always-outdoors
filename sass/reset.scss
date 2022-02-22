@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+    display: block;
+}
+
+button {
+    border: none;
+}
