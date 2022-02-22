@@ -10,10 +10,11 @@
 </head>
 <body>
     <header class="header">
-        <div class="header__logo">
-            <img src="./images/svg/icon-sun.svg" alt="logo">
-            <a class="u-p__left-m " href="#">Always Outdors</a>
-        </div>
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <img src="./images/svg/icon-sun.svg" alt="logo">
+                <a class="u-p__left-m " href="#">Always Outdors</a>
+            </div>
             <ul class="header__nav">
                 <li class="header__nav-item">
                     <a href="#">Destinations</a>
@@ -28,9 +29,34 @@
                     <a href="#">Gear</a>
                 </li>
             </ul>
-        <div class="header__search">
-            <img src="./images/svg/icon-search.svg" alt="">
-            <p class="header__search-field u-p__left-m u-fs-m">Search</p>
+            <div class="header__search">
+                <img src="./images/svg/icon-search.svg" alt="">
+                <input class="header__search-field u-p__left-m u-fs-m" placeholder="Search">
+            </div>
+            <div class="header__hamburger">
+                <div class="header__hamburger-icon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="header__hamburger-list-wrapper">
+                    <ul class="header__hamburger-list">
+                        <li>
+                            <a href="#">Destinations</a>
+                        </li>
+                        <li>
+                            <a href="#">Travel Styles</a>
+                        </li>
+                        <li>
+                            <a href="#">Travel Deals</a>
+                        </li>
+                        <li><a href="#">Gear</a></li>
+                        <li class="header__hamburger-list-item-search"><img src="./images/svg/icon-search.svg" alt="">
+                            <p class="">Search</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
     <section class="hero">
